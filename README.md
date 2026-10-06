@@ -54,13 +54,15 @@ This was a quick free-time project outside my usual full-stack work. I’m plann
 
 3. **Install dependencies**
    ```bash
-   pip install flask
+   pip install flask python-dotenv
    ```
 
-4. **Configure email (edit `app.py`)**
-   - Replace `EMAIL_ADDRESS` with your Gmail
-   - Replace `EMAIL_PASSWORD` with your App Password
-   - Replace `RECIPIENT_EMAIL` with the destination
+4. **Configure email using `.env`**
+   - Copy `.env.example` to a new file named `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit `.env` and fill in your Gmail address, App Password, and recipient email.
 
 5. **Run the app**
    ```bash

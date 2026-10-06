@@ -3,13 +3,17 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
 import base64
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-# Email configuration (replace with your details)
-EMAIL_ADDRESS = "your-email@gmail.com"
-EMAIL_PASSWORD = "your-app-password"
-RECIPIENT_EMAIL = "recipient-email@gmail.com"
+# Email configuration
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS", "your-email@gmail.com")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "your-app-password")
+RECIPIENT_EMAIL = os.getenv("RECIPIENT_EMAIL", "recipient-email@gmail.com")
 
 @app.route('/')
 def index():
