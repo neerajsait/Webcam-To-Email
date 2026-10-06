@@ -11,9 +11,9 @@ load_dotenv()
 app = Flask(__name__)
 
 # Email configuration
-EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS", "your-email@gmail.com")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "your-app-password")
-RECIPIENT_EMAIL = os.getenv("RECIPIENT_EMAIL", "recipient-email@gmail.com")
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+RECIPIENT_EMAIL = os.getenv("RECIPIENT_EMAIL")
 
 @app.route('/')
 def index():
